@@ -1,7 +1,7 @@
 #!/bin/bash
  
 git diff --cached --name-status --diff-filter=ACMR | while read STATUS FILE; do
-if [ "$FILE" =~ ^.+bak$ ]; then
+if [ "$FILE" =~ *.bak ]; then
 	echo "No se permiten ficheros .BAK" >&2
     exit 1
 fi
